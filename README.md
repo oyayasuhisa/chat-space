@@ -43,6 +43,7 @@
 ##**group_usersテーブル**
 
 |Column|type|Option|
+|------|----|------|
 |group|references|index: true, foreign_key: true, null: false|
 |user|references|index: true, foreign_key: true, null: false|
 
