@@ -1,40 +1,53 @@
 # README
 
 ##**DB設計**
-users table
+**usersテーブル**
 
 
-Column	type	Option
-name	string	index: true, null: false, unique: true
-mail	string	null: false, unipue: true
-Association
+|Column|type|Option|
+|------|----|------|
+|name|string|index: true, null: false, unique: true|
+|mail|string|null: false, unipue: true|
 
-has_many :groups, through: :group_users
-has_many :group_users
-has_many :massages
-groups table
+###Association
 
-Column	type	Option
-name	string	index: true, null: false, unipue: true
-Association
+- has_many :groups, through: :group_users
+- has_many :group_users
+- has_many :massages
 
-has_many :users, through: :group_users
-has_many :group_users
-has_many :messages
-message table
+##**messageテーブル**
 
-Column	type	Option
-body	text	null: false
-image	string	
-group	references	foreign_key: true
-user	references	foreign_key: true
-Association
+|Column|type|Option|
+|------|----|------|
+|body|text|null: false|
+|image|string|	
+|group|references|foreign_key: true|
+|user|references|foreign_key: true|
 
-belongs_to :user
-belongs_to :group
-group_users table
+###Association
 
-Column	type	Option
-group	references	index: true, foreign_key: true, null: false
-user	references	index: true, foreign_key: true, null: false
-Association
+- belongs_to :user
+- belongs_to :group
+
+##**groupsテーブルte-buru**
+
+|Column|type|Option|
+|------|----|------|
+|name|string|index: true, null: false, unipue: true|
+
+###Association
+
+- has_many :users, through: :group_users
+- has_many :group_users
+- has_many :messages
+
+##**group_usersテーブル**
+
+|Column|type|Option|
+|group|references|index: true, foreign_key: true, null: false|
+|user|references|index: true, foreign_key: true, null: false|
+
+###Association
+
+- belongs_to :group
+- belongs_to :user
