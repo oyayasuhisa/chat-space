@@ -20,8 +20,8 @@
 |------|----|------|
 |body|text|null: false|
 |image|string|	
-|group_id|references|foreign_key: true|
-|user_id|references|foreign_key: true|
+|group_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
 
 ###Association
 
@@ -44,8 +44,8 @@
 
 |Column|type|Option|
 |------|----|------|
-|group_id|references|foreign_key: true, null: false|
-|user_id|references|foreign_key: true, null: false|
+|group_id|integer|foreign_key: true, null: false|
+|user_id|integer|foreign_key: true, null: false|
 
 ###Association
 
