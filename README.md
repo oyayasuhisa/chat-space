@@ -10,8 +10,8 @@
 
 ###Association
 
-- has_many :groups, through: :group_users
-- has_many :group_users
+- has_many :groups, through: :groups_users
+- has_many :groups_users
 - has_many :massages
 
 ##**messageテーブル**
@@ -20,34 +20,34 @@
 |------|----|------|
 |body|text|null: false|
 |image|string|	
-|group|references|foreign_key: true|
-|user|references|foreign_key: true|
+|group_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
 
 ###Association
 
 - belongs_to :user
-- belongs_to :group
+- belongs_to :groups
 
-##**groupsテーブルte-buru**
+##**groupsテーブル**
 
 |Column|type|Option|
 |------|----|------|
-|name|string|index: true, null: false, unipue: true|
+|name|string|null: false, unipue: true|
 
 ###Association
 
 - has_many :users, through: :group_users
-- has_many :group_users
+- has_many :groups_users
 - has_many :messages
 
-##**group_usersテーブル**
+##**groups_usersテーブル**
 
 |Column|type|Option|
 |------|----|------|
-|group|references|index: true, foreign_key: true, null: false|
-|user|references|index: true, foreign_key: true, null: false|
+|group_id|integer|foreign_key: true, null: false|
+|user_id|integer|foreign_key: true, null: false|
 
 ###Association
 
-- belongs_to :group
+- belongs_to :groups
 - belongs_to :user
