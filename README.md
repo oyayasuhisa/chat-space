@@ -3,7 +3,6 @@
 ##**DB設計**
 **usersテーブル**
 
-
 |Column|type|Option|
 |------|----|------|
 |name|string|index: true, null: false, unique: true|
