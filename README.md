@@ -3,7 +3,6 @@
 ##**DB設計**
 **usersテーブル**
 
-
 |Column|type|Option|
 |------|----|------|
 |name|string|index: true, null: false, unique: true|
@@ -11,8 +10,8 @@
 
 ###Association
 
-- has_many :groups, through: :group_users
-- has_many :group_users
+- has_many :groups, through: :groups_users
+- has_many :groups_users
 - has_many :massages
 
 ##**messageテーブル**
@@ -27,7 +26,7 @@
 ###Association
 
 - belongs_to :user
-- belongs_to :group
+- belongs_to :groups
 
 ##**groupsテーブル**
 
@@ -38,10 +37,10 @@
 ###Association
 
 - has_many :users, through: :group_users
-- has_many :group_users
+- has_many :groups_users
 - has_many :messages
 
-##**group_usersテーブル**
+##**groups_usersテーブル**
 
 |Column|type|Option|
 |------|----|------|
@@ -50,5 +49,5 @@
 
 ###Association
 
-- belongs_to :group
+- belongs_to :groups
 - belongs_to :user
