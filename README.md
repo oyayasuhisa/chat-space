@@ -21,19 +21,19 @@
 |------|----|------|
 |body|text|null: false|
 |image|string|	
-|group|references|foreign_key: true|
-|user|references|foreign_key: true|
+|group_id|references|foreign_key: true|
+|user_id|references|foreign_key: true|
 
 ###Association
 
 - belongs_to :user
 - belongs_to :group
 
-##**groupsテーブルte-buru**
+##**groupsテーブル**
 
 |Column|type|Option|
 |------|----|------|
-|name|string|index: true, null: false, unipue: true|
+|name|string|null: false, unipue: true|
 
 ###Association
 
@@ -44,8 +44,9 @@
 ##**group_usersテーブル**
 
 |Column|type|Option|
-|group|references|index: true, foreign_key: true, null: false|
-|user|references|index: true, foreign_key: true, null: false|
+|------|----|------|
+|group_id|references|foreign_key: true, null: false|
+|user_id|references|foreign_key: true, null: false|
 
 ###Association
 
