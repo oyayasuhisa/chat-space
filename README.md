@@ -13,13 +13,13 @@
 
 - has_many :groups, through: :group_users
 - has_many :groups_users
-- has_many :massages
+- has_many :messages
 
 ##**messageテーブル**
 
 |Column|type|Option|
 |------|----|------|
-|body|text|null: false|
+|body|text|
 |image|string|	
 |group_id|integer|foreign_key: true|
 |user_id|integer|foreign_key: true|
