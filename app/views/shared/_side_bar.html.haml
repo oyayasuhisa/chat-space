@@ -12,10 +12,11 @@
                   = icon('fas', 'cog', class: 'icon') 
    
    .groups
-      .group
-         - current_user.groups.each do |group|
-            = link_to '#' do
+      - current_user.groups.each do |group|
+         .group    
+            = link_to group_messages_path(group) do
                %p.group__name
                   = group.name
                %p.group__message
                   メッセージはまだありません。
+
