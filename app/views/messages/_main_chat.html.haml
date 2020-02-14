@@ -12,16 +12,7 @@
          .main-header__edit-btn  Edit
    .messages
       = render @messages
-      .message
-         .message__info
-            %p.message__info__talker  aaaaa          
-            %p.message__info__data  1111/11/11 0:00:00
-         %p.message__text aaaaa 
-      .message
-         .message__info
-            .message__info__talker kkkkkkkk
-            .message__info__data   1111/11/11 0:00:00
-         .message__text ssssss
+
            
    .form
       = form_for [@group, @message] do |f|
