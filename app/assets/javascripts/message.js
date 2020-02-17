@@ -63,7 +63,7 @@ $(function(){
      });
      return false;
   });
-<<<<<<< Updated upstream
+
     var reloadMessages = function() {
       last_message_id = $('.message:last').data("message-id");
       $.ajax({
@@ -90,8 +90,4 @@ $(function(){
       setInterval(reloadMessages, 7000);
      }
   });
-
-
-=======
-});
->>>>>>> Stashed changes
+}); 
