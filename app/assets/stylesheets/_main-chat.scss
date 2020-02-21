@@ -40,7 +40,7 @@
    .form {
     padding: 20px 40px;
     background-color: #ddd;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: calc(100vw - 300px);
     &__message {
