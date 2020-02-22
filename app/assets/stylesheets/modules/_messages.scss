@@ -8,15 +8,15 @@
   overflow: scroll;
   .message {
     padding-bottom: 40px;
-    &__info {
+    .upper-message{
       display: flex;
       margin-bottom: 10px;
-      &__talker {
+      &__user-name{
         font-size: 16px;
         font-weight: bold;
         padding-right: 10px;
       }
-      &__data {
+      &__date {
         font-size: 15px;
         color: grey;
         padding: 3px 0;

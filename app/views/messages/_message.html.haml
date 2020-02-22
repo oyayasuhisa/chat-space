@@ -1,10 +1,10 @@
 .message{data: {message: {id: message.id}}}
-   .message__info
-      %p.message__info__talker 
+   .upper-message
+      %p.upper-message__user-name
          = message.user.name          
-      %p.message__info__data 
+      %p.upper-message__date 
          = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-   %p.message__text  
+   %p.lower-message  
       - if message.content.present?
          .lower-message__content
             = message.content
